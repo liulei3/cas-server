@@ -1,0 +1,391 @@
+article,
+aside,
+blockquote,
+body,
+button,
+code,
+dd,
+details,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+input,
+legend,
+li,
+menu,
+nav,
+ol,
+p,
+pre,
+section,
+td,
+textarea,
+th,
+ul {
+    font-family: arial, Microsoft Yahei;
+    margin: 0;
+    padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    text-align: inherit;
+}
+
+fieldset,
+img {
+    border: none;
+}
+
+iframe {
+    display: block;
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-style: normal;
+    font-weight: 500;
+}
+
+li,
+ol,
+ul {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: 500;
+}
+
+q:after,
+q:before {
+    content: "";
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -.5em;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a,
+ins {
+    text-decoration: none;
+}
+
+.txt-r {
+    text-align: right;
+}
+
+.txt-c {
+    text-align: center;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+}
+
+a,
+input,
+textarea {
+    outline: none;
+}
+
+a {
+    color: #0081cb;
+}
+
+.containers {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+.m-t-10 {
+    margin-top: 10px;
+}
+
+.btn {
+    border-radius: 30px;
+}
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus,
+button:focus {
+    outline: none !important;
+}
+
+.logo {
+    position: absolute;
+    top: 16px;
+}
+.col-left{
+  display:block;
+  min-width:1200px;
+  height:580px;
+  background-size:100% 100%;
+  overflow:hidden;
+}
+/* .col-left {
+    background: url(/cas/img/login/logo_zzbjt.jpg) 50% no-repeat;
+    background-size: 100% 100%;
+    height: 580px;
+    min-width: 1200px;
+} */
+
+.loginNew {
+    margin: -498px auto 0;
+    position: relative;
+}
+
+.loginNew .col-right {
+    background: #fff;
+    border-radius: 8px;
+    color: #555;
+    overflow: hidden;
+    width: 400px;
+}
+
+.nav-tabs.nav-justified>.active>a,
+.nav-tabs.nav-justified>.active>a:focus,
+.nav-tabs.nav-justified>.active>a:hover,
+.nav-tabs.nav-justified>li>a:focus {
+    background: #fff;
+    color: #555 !important;
+    font-weight: 700;
+}
+
+.login-container a {
+    color: #555;
+}
+
+.nav-tabs.nav-justified,
+.nav-tabs.nav-justified>li>a:hover {
+    background: #e5e5e5;
+    color: #555;
+}
+
+.nav-tabs.nav-justified>li>a {
+    border-bottom: none;
+    color: #555;
+    font-weight: 700;
+}
+
+.btn-warning,
+.btn-warning:active,
+.btn-warning:active:focus,
+.btn-warning:focus {
+    background: #278ff0;
+    border: 1px solid #278ff0;
+    font-weight: 700;
+    height: 40px;
+}
+
+.btn-warning:hover {
+    background: #1e84e2;
+    border: 1px solid #1e84e2;
+}
+
+.wxonlod {
+    display: block;
+    margin-top: 20px;
+    line-height: 18px;
+}
+
+.wxonlod img {
+    display: inline-block;
+    height: 18px;
+    margin-right: 10px;
+    width: 18px;
+}
+
+.footer_content {
+    color: #333;
+    font-size: 12px;
+    margin-top: 498px;
+    text-align: center;
+    height: 120px;
+    line-height: 120px;
+}
+
+#CA>.no-padding-left>.form-group,
+#name>.no-padding-left>.form-group {
+    height: 54px;
+}
+
+.hide2 {
+    display: none;
+}
+
+.col-right {
+    padding-bottom: 40px;
+}
+
+.tab-pane {
+    padding: 20px 45px 0;
+}
+
+.form-control {
+    height: 40px;
+}
+
+.nav-tabs.nav-justified>li>a {
+    font-size: 18px;
+}
+
+.register-top {
+    background: url(/cas/img/head/header-bg-tel.png) right 15px no-repeat;
+    height: 100px;
+    position: relative;
+}
+
+
+/* ca form start */
+.tab-pane-account .form .security-code .security-code-txt{
+    width: 159px;
+}
+.tab-pane-account .form .security-code .security-code-img{
+    display: block;
+    height: 40px;
+    margin-left: 10px;
+    float: left;
+    width: 100px;
+    cursor: pointer;
+}
+
+
+/* ca form end */
+
+
+
+/* ca form start */
+.tab-pane-ca .form .tip{
+    color: #999;
+}
+
+.tab-pane-ca .form .tip .tit{
+    font-size: 15px;
+    line-height: 24px;
+}
+.tab-pane-ca .form .tip .txt{
+    font-size: 14px;
+    line-height: 22px;
+}
+.tab-pane-ca .form .tip .txt a{
+    color: #ed5f5b;
+    padding: 0 3px;
+}
+/* ca form end */
+
+.login-box-tip{
+    color: #555;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+
+/* tip ca start */
+.tip_ca{
+    background: #fffbe8;
+    width: 100%;
+    display: none;
+    line-height: 90px;
+    text-align: center;
+    color: #e19c1f;
+    font-size: 22px;
+}
+
+/* tip ca end */

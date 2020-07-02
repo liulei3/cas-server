@@ -1,0 +1,7 @@
+{
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "http://front.cas.com:3000",
+  "name" : "front",
+  "id" : 1003,
+  "evaluationOrder" : 10000
+}

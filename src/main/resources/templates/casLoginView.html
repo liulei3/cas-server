@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="/cas/js/plugins/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cas/css/font/iconfont.css">
+<link rel="stylesheet" href="/cas/css/login.css">
+</head>
+
+<body class="bg-gray">
+    <div class="tip_ca">使用CA登录平台，请使用IE浏览器</div>
+    <div class="loginHead">
+        <div class="containers bg-gray">
+            <!-- logo-->
+            <div class="register-top"><a th:attr="href=${homeUrl}"><img class="logo" src="/cas/img/head/header-logo.png" alt=""></a></div>
+        </div>
+    </div>
+    <div id="imgload" class="col-left" th:attr="style='background: url(/cas/img/login/bg/load'+${pic}+'.jpg) no-repeat'"></div>
+    <div class="loginNew containers">
+        <div class="col-right pull-right login-container">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li class="active" role="presentation"><a href="#name" role="tab" data-toggle="tab">账号登录</a></li>
+                <li role="presentation"><a href="#CA" role="tab" data-toggle="tab">CA登录</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane tab-pane-account active" id="name" role="tabpanel">
+                	<form class="form" action="login" method="post" th:object="${credential}">
+                        <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
+                            <span th:each="err : ${#fields.errors('*')}" th:utext="${err}">Example error</span>
+                        </div>
+                        <ul class="no-padding-left m-t-20">
+                            <li class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                                    <input class="form-control" id="zhanghu_yonghuming" type="text" name="username" th:value="${username}" 
+                                    	placeholder="请输入手机号/邮箱号">
+                                </div>
+                                <div class="text-danger hide2" id="login-form-tips1"></div>
+                            </li>
+                            <li class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+                                    <input class="form-control" id="zhanghu_mima" type="password" name="password" th:field="*{password}" placeholder="请输入密码">
+                                </div>
+                                <div class="text-danger hide2" id="login-form-tips2"></div>
+                            </li>
+                            <li class="form-group">
+                                <div class="input-group security-code">
+                                    <div class="input-group-addon"><i class="iconfont icon-securityCode-b"></i></div>
+                                    <input class="form-control security-code-txt" id="zhanghu_yanzhengma" type="text" name="code" th:field="*{code}" placeholder="验证码">
+                                    <img class="security-code-img" id="img" src="/cas/code">
+                                </div>
+                                <div class="text-danger hide2" id="login-form-tips2"></div>
+                            </li>
+						</ul>
+						<input type="hidden" name="type" value="1">
+						<input type="hidden" name="execution" th:value="${flowExecutionKey}" />
+						<input type="hidden" name="_eventId" value="submit" />
+                        <p class="m-t-20 clearfix"><a class="pull-left" th:attr="href=${forgetpwdUrl}">忘记密码？</a><span class="pull-right">还没有账号？<a th:attr="href=${registerUrl}" style="color:#0792f4;">立即注册</a></span></p>
+						<div class="login-box m-t-20">
+                            <button class="btn btn-warning btn-block" id="btn_submit_zhanghao" type="submit">登录</button>
+						</div>
+                  </form>
+                  <a class="wxonlod" href="javascript:;"><img src="/cas/img/login/ewmicon.png">微信登录</a>
+                </div>
+                <div class="tab-pane tab-pane-ca" id="CA" role="tabpanel">
+                	<form id ="ca" class="form m-t-10" action="login" method="post" th:object="${credential}">
+                		<input type="hidden" name="username" value="0">
+                		<input type="hidden" name="password" value="0">
+						<input type="hidden" name="type" value="2">
+						<input type="hidden" id="random" name="random" th:value="${random}">
+						<input type="hidden" name="execution" th:value="${flowExecutionKey}" />
+						<input type="hidden" name="_eventId" value="submit" />
+                        <p class="login-box-tip">请在您的电脑上插入USBKey，之后点击下面按钮即可登录。</p>
+                        <div class="alert alert-danger m-t-20" th:if="${#fields.hasErrors('*')}">
+                            <span th:each="err : ${#fields.errors('*')}" th:utext="${err}">Example error</span>
+                        </div>
+                        <div class="login-box m-t-20">
+                            <button class="btn btn-warning btn-block" id="btn_submit_ca" type="submit">登录</button>
+                        </div>
+                        <div class="tip m-t-20">
+                            <p class="tit">请注意：</p>
+                            <p class="txt">若您的电脑尚未安装USBKey驱动程序，请点击<a href="#javascript:void(0);">这里</a>进行安装。</p>
+                        </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="footer_content">中招联合信息股份有限公司 © 版权所有 京ICP备 15051098</p>
+    <script src="/cas/js/lib/jquery-1.12.4.min.js"></script>
+	<script src="/cas/js/plugins/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="/cas/js/login.js"></script>
+	<object id ="myControl" classid ="clsid:0457A67A-AD35-4B98-89EA-E43FEA42CFD4" style="display: none;"></object> 
+</body>
+
+</html>
